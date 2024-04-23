@@ -19,6 +19,7 @@ public class Prob05 {
 			int correctNumber = random.nextInt(100) + 1;
 			boolean flag = true;
 
+			// 정답보다 큰 수 인지 작은 수인지 판별
 			while (flag) {
 				System.out.print(turn + "-");
 				int userAnswer = scanner.nextInt();
@@ -41,6 +42,8 @@ public class Prob05 {
 			if ("y".equals(answer) == false) {
 				break;
 			}
+			
+			// 순서 초기화
 			turn = 1;
 		}
 
