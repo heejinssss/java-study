@@ -6,17 +6,24 @@ public class Prob5 {
 		for (int i = 3; i <= 99; i++) {
 			String str = Integer.toString(i);
 			String[] arr = str.split("");
-			boolean flag = false;
 
+			int times = 0;
 			for (int j = 0; j < arr.length; j++) {
 				int temp = Integer.parseInt(arr[j]);
 				if (temp % 3 == 0 & temp != 0) {
-					flag = true;
+					times++;
 				}
 			}
 
-			if (flag) {
-				System.out.println(i + " 짝");
+			if (times > 0) {
+				System.out.print(i);
+				System.out.print(" ");
+				while (times > 0) {
+					System.out.print("짝");
+					times--;
+				}
+
+				System.out.println();
 			}
 		}
 	}
