@@ -14,7 +14,6 @@ public class Prob01 {
 		for (int i = 0; i < MONEYS.length; i++) {
 			int j = price / MONEYS[i];
 			price %= MONEYS[i];
-
 			System.out.println(MONEYS[i] + "원 : " + j + "개");
 		}
 
