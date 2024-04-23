@@ -8,16 +8,14 @@ public class Prob3 {
 
 		System.out.print("숫자를 입력하세요. : ");
 		int number = scanner.nextInt();
+		int sum = 0;
 
-		int temp = number;
-		int total = 0;
-
-		while (temp > 0) {
-			total += temp;
-			temp -= 2;
+		while (number > 0) {
+			sum += number;
+			number -= 2;
 		}
 
-		System.out.println(total);
+		System.out.println(sum);
 
 		scanner.close();
 	}
