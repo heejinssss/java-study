@@ -8,5 +8,6 @@ public class Goods2App {
 		goods.name = "camera";
 //		goods.price = 20000; // protected
 //		goods.countStock = 10; // default
+//		goods.countSold = 50; // private
 	}
 }
