@@ -50,7 +50,9 @@ public class Goods {
 	}
 
 	public void showInfo() {
-		System.out.println("상품이름 : " + getName() + ", " + "가격 : " + getPrice() + ", " + "재고개수 : " + getCountStock()
-				+ ", " + "팔린 개수 : " + getCountSold());
+		System.out.println("상품이름 : " + getName() + ", "
+						 + "가격 : " + getPrice() + ", "
+                         + "재고개수 : " + getCountStock() + ", "
+                         + "팔린 개수 : " + getCountSold());
 	}
 }
