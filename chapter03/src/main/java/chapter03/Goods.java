@@ -16,6 +16,10 @@ public class Goods {
 		return price;
 	}
 	public void setPrice(int price) {
+		if (price < 0) {
+			price = 0;
+		}
+
 		this.price = price;
 	}
 	public int getCountStock() {

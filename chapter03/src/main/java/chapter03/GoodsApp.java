@@ -22,5 +22,8 @@ public class GoodsApp {
 		
 //		System.out.println("상품이름 : " + camera.getName());
 		camera.showInfo();
+		
+		// Information Hiding (Data Protection)
+		camera.setPrice(-400000);
 	}
 }
