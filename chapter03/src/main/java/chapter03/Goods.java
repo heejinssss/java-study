@@ -1,10 +1,17 @@
 package chapter03;
 
 public class Goods {
+	public static int countOfGoods = 0;
+	
 	private String name;
 	private int price;
 	private int countStock;
 	private int countSold;
+	
+	public Goods() {
+//		countOfGoods++; // 내부에서는 클래스명 생략해도 에러 없음
+		Goods.countOfGoods++;
+	}
 
 	public String getName() {
 		return name;
