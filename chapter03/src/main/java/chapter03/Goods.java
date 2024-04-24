@@ -55,4 +55,9 @@ public class Goods {
                          + "재고개수 : " + getCountStock() + ", "
                          + "팔린 개수 : " + getCountSold());
 	}
+	
+	public int calcDiscountPrice(float percentage) {
+		int result = price - (int)(price * percentage);
+		return result;
+	}
 }
