@@ -9,6 +9,7 @@ public class Goods {
 	private int countSold;
 
 	public Goods() {
+		this("", 0, 0, 0);
 	}
 
 	public Goods(String name, int price, int countStock, int countSold) {
