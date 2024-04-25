@@ -4,16 +4,16 @@ public class Account {
 	private String accountNo;
 	private int balance = 0;
 
-	Account(String a) {
-		this.accountNo = a;
+	Account(String accountNo) {
+		this.accountNo = accountNo;
 	}
 
-	void save(int s) {
-		this.balance = balance + s;
+	void save(int save) {
+		this.balance = balance + save;
 	}
 
-	void deposit(int d) {
-		this.balance = balance - d;
+	void deposit(int deposit) {
+		this.balance = balance - deposit;
 	}
 
 	public String getAccountNo() {
