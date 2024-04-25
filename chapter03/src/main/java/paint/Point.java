@@ -4,6 +4,10 @@ public class Point {
 	private int x;
 	private int y;
 
+	// ColorPoint.java에서 부모 생성자를 직접 호출함
+//	public Point() {
+//	}
+
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
