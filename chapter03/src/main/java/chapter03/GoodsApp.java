@@ -14,11 +14,11 @@ Goods 클래스를 정의하고 GoodsApp 클래스에서  Goods 클래스를 테
 
 public class GoodsApp {
 	public static void main(String[] args) {
-		Goods camera = new Goods();
-		camera.setName("nikon");
-		camera.setPrice(400000);
-		camera.setCountSold(50);
-		camera.setCountStock(30);
+		Goods camera = new Goods("nikon", 400000, 50, 30);
+//		camera.setName("nikon");
+//		camera.setPrice(400000);
+//		camera.setCountSold(50);
+//		camera.setCountStock(30);
 
 		camera.showInfo();
 
