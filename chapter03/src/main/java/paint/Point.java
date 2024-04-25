@@ -25,7 +25,20 @@ public class Point {
 		this.y = y;
 	}
 
+	public void show(boolean visible) {
+		if (visible) {
+//			System.out.println("점(" + x + ", " + y + ")을 그렸습니다.");
+			show();
+		} else {
+			System.out.println("점(" + x + ", " + y + ")을 지웠습니다.");
+		}
+	}
+
 	public void show() {
 		System.out.println("점(" + x + ", " + y + ")을 그렸습니다.");
 	}
+
+//	public void disappear() {
+//		System.out.println("점(" + x + ", " + y + ")을 지웠습니다.");
+//	}
 }
