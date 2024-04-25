@@ -10,9 +10,10 @@ public class SongApp {
 //		song.setTrack(3);
 //		song.setYear(2010);
 		
+		song01.show();
+		
 		Song song02 = new Song("Ditto", "New Jeans");
 
-		song01.show();
 		song02.show();
 	}
 }

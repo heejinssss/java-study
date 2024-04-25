@@ -7,11 +7,10 @@ public class Song {
 	private String composer;
 	private int track;
 	private int year;
-	
-	// Method Overloading
+
+	// Method Overloading (Refactoring)
 	public Song(String title, String artist) {
-		this.title = title;
-		this.artist = artist;
+		this(title, "", "", artist, 0, 0);
 	}
 
 	// Method Overloading
@@ -22,6 +21,12 @@ public class Song {
 		this.artist = artist;
 		this.track = track;
 		this.year = year;
+
+		System.out.println(1);
+		System.out.println(2);
+		System.out.println(3);
+		System.out.println(4);
+		System.out.println(5);
 	}
 
 	public String getTitle() {
@@ -73,6 +78,7 @@ public class Song {
 	}
 
 	public void show() {
-		System.out.println(artist + " " + title + " " + album + " " + year + " " + track + "번 track " + composer + "작곡");
+		System.out
+				.println(artist + " " + title + " " + album + " " + year + " " + track + "번 track " + composer + "작곡");
 	}
 }
