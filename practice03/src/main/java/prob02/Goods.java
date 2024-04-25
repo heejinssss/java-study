@@ -5,10 +5,10 @@ public class Goods {
 	private int price;
 	private int addStock;
 	
-	Goods(String pn, int p, int as) {
-		productName = pn;
-		price = p;
-		addStock = as;
+	Goods(String productName, int price, int addStock) {
+		this.productName = productName;
+		this.price = price;
+		this.addStock = addStock;
 	}
 
 	public String getProductName() {
