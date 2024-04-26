@@ -26,10 +26,10 @@ public class CalcApp {
 			int lValue = Integer.parseInt(tokens[0]);
 			int rValue = Integer.parseInt(tokens[2]);
 
-			Operation operation;
+			Arith arith;
 			switch (tokens[1]) {
 			case "+":
-				operation = new Add();
+				arith = new Add();
 //				Add add = new Add();
 //				add.setValue(lValue, rValue);
 //				int result = add.calculate();
@@ -37,7 +37,7 @@ public class CalcApp {
 
 				break;
 			case "-":
-				operation = new Sub();
+				arith = new Sub();
 //				Sub sub = new Sub();
 //				sub.setValue(lValue, rValue);
 //				int result = sub.calculate();
@@ -45,7 +45,7 @@ public class CalcApp {
 
 				break;
 			case "*":
-				operation = new Mul();
+				arith = new Mul();
 //				Mul mul = new Mul();
 //				mul.setValue(lValue, rValue);
 //				int result = mul.calculate();
@@ -53,7 +53,7 @@ public class CalcApp {
 
 				break;
 			case "/":
-				operation = new Div();
+				arith = new Div();
 //				Div div = new Div();
 //				div.setValue(lValue, rValue);
 //				int result = div.calculate();
@@ -64,9 +64,8 @@ public class CalcApp {
 				System.out.println(">> 알 수 없는 연산입니다.");
 				continue;
 			}
-			operation.setValue(lValue, rValue);
-			int result = operation.calculate();
-			System.out.println(">> " + result);
+			arith.setValue(lValue, rValue);
+			System.out.println(">> " + arith.calculate());
 		}
 
 		scanner.close();
