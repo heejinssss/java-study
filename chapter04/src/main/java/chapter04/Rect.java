@@ -18,7 +18,8 @@ public class Rect {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(h, w);
+//		return Objects.hash(h, w);
+		return Objects.hash(h * w);
 	}
 
 	@Override
@@ -30,6 +31,7 @@ public class Rect {
 		if (getClass() != obj.getClass())
 			return false;
 		Rect other = (Rect) obj;
-		return h == other.h && w == other.w;
+//		return h == other.h && w == other.w;
+		return h * w == other.h * other.w;
 	}
 }
