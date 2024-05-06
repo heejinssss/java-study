@@ -93,7 +93,7 @@ public class ChatServerThread extends Thread {
 	private void doJoin(String nickname, Writer writer) {
 		PrintWriter pw = (PrintWriter) writer;
 		this.nickname = nickname;
-		String data = "⋆⁺₊⋆ ⋆⁺₊⋆ ❤ " + nickname + "님! 환영합니다." + " ❤⋆⁺₊⋆ ⋆⁺₊⋆";
+		String data = "⋆⁺₊⋆ ⋆⁺₊⋆ ❤ " + nickname + "님이 입장하셨습니다." + " ❤⋆⁺₊⋆ ⋆⁺₊⋆";
 		broadcast(data);
 		addWriter(writer);
 		pw.println("join:ok");
