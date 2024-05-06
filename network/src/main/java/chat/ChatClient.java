@@ -11,63 +11,58 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ChatClient {
-	private static final String SERVER_IP = "0.0.0.0";
+	private static final String SERVER_IP = "127.0.0.1";
+	private static final int SERVER_PORT = 6000;
 
 	public static void main(String[] args) {
 		Socket socket = null;
 		Scanner scanner = null;
 
 		try {
+			scanner = new Scanner(System.in);
 			socket = new Socket();
 			socket.connect(new InetSocketAddress(SERVER_IP, ChatServer.PORT));
 
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "utf-8"), true);
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "utf-8"));
 
-			scanner = new Scanner(System.in);
-
 			System.out.println("닉네임을 입력하세요>>");
 			String nickname = scanner.nextLine();
 			pw.println("join:" + nickname);
-
-			String confirm = br.readLine();
-
-			if (confirm.equals("입장: 확인")) {
-				System.out.println("채팅방에 입장했어요.");
-
-			}
-			// 입력 받았으니 채팅 시작
-			new ChatClientThread(socket).start();
+			
+			new ChatClientThread(br).start();
+			
+//			String confirm = br.readLine();
+//
+//			if (confirm.equals("입장: 확인")) {
+//				System.out.println("채팅방에 입장했어요.");
+//
+//			}
 
 			while (true) {
 				String msg = scanner.nextLine();
+
 				if (msg.toLowerCase().equals("quit")) {
-					pw.println("quit");
+					System.out.println("채팅을 종료합니다.");
 					break;
-				}
-				if (msg.equals("") == false) {
-					System.out.println("메시지가 입력되었나요?");
+				} else {
 					pw.println("message:" + msg);
 				}
-				if (scanner.hasNextLine() == false) {
-					continue;
-				}
 			}
-
 		} catch (ConnectException e) {
-			System.out.println("[ClientError] : " + e);
+			System.out.println("Socket Exception : " + e);
 		} catch (IOException e) {
-			System.out.println("[ClientError] : " + e);
+			System.out.println("Error : " + e);
 		} finally {
 			try {
-				if (scanner != null) {
-					scanner.close();
-				}
-				if (socket != null && socket.isClosed() == false) {
+				if (socket != null && socket.isClosed()) {
 					socket.close();
 				}
+				if (scanner != null) {
+					scanner.close();
+				}					
 			} catch (IOException e) {
-				System.out.println("[ClientError] : " + e);
+				System.out.println("Error] : " + e);
 			}
 		}
 	}
