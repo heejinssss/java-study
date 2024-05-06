@@ -31,13 +31,6 @@ public class ChatClient {
 			pw.println("join:" + nickname);
 			
 			new ChatClientThread(br).start();
-			
-//			String confirm = br.readLine();
-//
-//			if (confirm.equals("입장: 확인")) {
-//				System.out.println("채팅방에 입장했어요.");
-//
-//			}
 
 			while (true) {
 				String msg = scanner.nextLine();

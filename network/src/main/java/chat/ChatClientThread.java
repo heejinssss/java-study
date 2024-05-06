@@ -6,8 +6,6 @@ import java.io.Reader;
 
 public class ChatClientThread extends Thread {
 	private final Reader reader;
-//	private BufferedReader br;
-//	private Socket socket;
 
 	public ChatClientThread(Reader reader) {
 		this.reader = reader;
@@ -15,28 +13,9 @@ public class ChatClientThread extends Thread {
 
 	@Override
 	public void run() {
-//		try {
-//			BufferedReader br = (BufferedReader) reader;
-//			String msg;
-//			while ((msg = br.readLine()) != null) {
-//				System.out.println(msg);
-//			}
-//		} catch (SocketException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} finally {
-//			try {
-//				if (socket != null && !socket.isClosed()) {
-//					socket.close();
-//				}
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
-
 		BufferedReader br = (BufferedReader) reader;
 		String msg;
+
 		try {
 			while (true) {
 				msg = br.readLine();

@@ -99,10 +99,6 @@ public class ChatWindow {
 	private void sendMessage() {
 		String message = textField.getText();
 
-//		if (message == null || "".equals(message)) {
-//			return;
-//		}
-
 		if ("quit".equals(message)) {
 			finish();
 			return;
