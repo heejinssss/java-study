@@ -15,7 +15,5 @@ public abstract class AbstractCalculate {
 		System.out.println(result);
 	}
 	
-//	public abstract int calculate(int val1, int val2) {
-//		
-//	}
+	public abstract int calculate(int val1, int val2);
 }
